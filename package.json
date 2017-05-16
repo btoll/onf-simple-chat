@@ -6,7 +6,8 @@
     "onf-simple-chat": "./bin/onf-simple-chat"
   },
   "scripts": {
-    "build": "make",
+    "build": "cmake CMakeLists.txt",
+    "clean": "rm -rf CMakeFiles CMakeCache.txt cmake_install.cmake bin/libsimple_chat.*",
     "prepublish": "git submodule init && npm run update && npm run build",
     "update": "git submodule update --remote"
   },
