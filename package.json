@@ -1,0 +1,27 @@
+{
+  "name": "onf-chat",
+  "version": "0.1.0",
+  "description": "Simple chat server",
+  "bin": {
+    "onf-simple-chat": "./bin/onf-simple-chat"
+  },
+  "scripts": {
+    "build": "make",
+    "prepublish": "git submodule init && npm run update && npm run build",
+    "update": "git submodule update --remote"
+  },
+  "keywords": [
+      "chat",
+      "telnet"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/btoll/onf-simple-chat"
+  },
+  "author": "Benjamin Toll <benjam72@yahoo.com> (http://www.benjamintoll.com)",
+  "license": "GPLv3",
+  "dependencies": {
+    "ffi": "^2.2.0"
+  }
+}
+

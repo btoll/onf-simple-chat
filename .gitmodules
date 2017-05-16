@@ -1,0 +1,3 @@
+[submodule "simple_chat"]
+	path = simple_chat
+	url = https://github.com/btoll/simple_chat.git

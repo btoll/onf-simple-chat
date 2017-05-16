@@ -1,0 +1,13 @@
+#!/usr/bin/env node
+
+const ffi = require('ffi');
+// const cp = require('child_process');
+
+// process.env.LD_LIBRARY_PATH = '.';
+
+const chat = ffi.Library('libsimple_chat', {
+    start: ['void', ['string']]
+});
+
+chat.start('3333');
+
