@@ -1,6 +1,5 @@
 node_modules
-
-*.so
+bin/simple_chat
 
 CMakeFiles
 CMakeCache.txt

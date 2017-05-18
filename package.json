@@ -7,22 +7,19 @@
   },
   "scripts": {
     "build": "cmake CMakeLists.txt",
-    "clean": "rm -rf CMakeFiles CMakeCache.txt cmake_install.cmake bin/libsimple_chat.*",
+    "clean": "rm -rf CMakeFiles CMakeCache.txt cmake_install.cmake bin/simple_chat",
     "prepublish": "git submodule init && npm run update && npm run build",
     "update": "git submodule update --remote"
   },
   "keywords": [
-      "chat",
-      "telnet"
+    "chat",
+    "telnet"
   ],
   "repository": {
     "type": "git",
     "url": "https://github.com/btoll/onf-simple-chat"
   },
   "author": "Benjamin Toll <benjam72@yahoo.com> (http://www.benjamintoll.com)",
-  "license": "GPLv3",
-  "dependencies": {
-    "ffi": "^2.2.0"
-  }
+  "license": "GPLv3"
 }
 

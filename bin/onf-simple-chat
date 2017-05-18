@@ -1,13 +1,15 @@
 #!/usr/bin/env node
 
-const ffi = require('ffi');
-// const cp = require('child_process');
+const cp = require('child_process');
+const port = process.argv[2] || '3333';
 
-// process.env.LD_LIBRARY_PATH = '.';
-
-const chat = ffi.Library('libsimple_chat', {
-    start: ['void', ['string']]
+const ps = cp.spawn('./bin/simple_chat', [port], {
+    env: {
+        LD_LIBRARY_PATH: './bin'
+    }
 });
 
-chat.start('3333');
+ps.stderr.on('data', data => {
+    console.log(`${data}`);
+});
 
