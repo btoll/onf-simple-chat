@@ -2,12 +2,10 @@
   "name": "onf-chat",
   "version": "0.1.0",
   "description": "Simple chat server",
-  "bin": {
-    "onf-simple-chat": "./bin/onf-simple-chat"
-  },
   "scripts": {
-    "build": "cmake CMakeLists.txt",
-    "clean": "rm -rf CMakeFiles CMakeCache.txt cmake_install.cmake bin/simple_chat",
+    "build": "mkdir -p bin && cmake CMakeLists.txt",
+    "chat": "./bin/simple_chat",
+    "clean": "rm -rf CMakeFiles CMakeCache.txt cmake_install.cmake bin",
     "prepublish": "git submodule init && npm run update && npm run build",
     "update": "git submodule update --remote"
   },
